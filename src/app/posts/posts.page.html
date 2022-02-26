@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Posts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let post of posts" [routerLink]="['/posts',post.id]">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>{{ post.category_id}} {{ post.user_id }}</ion-card-subtitle>
+        <ion-card-title> {{ post.name }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ post.subtitulo}}
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-content>
+<!-- ionic generata -->

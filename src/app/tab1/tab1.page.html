@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Funcionalidades
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let place of places" [routerLink]="['/whats-app']">
+      <ion-avatar slot="start">
+        <ion-img [src]="place.img" ></ion-img>
+    
+
+      </ion-avatar>
+      <ion-label>
+        {{ place.title}}
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<!-- ionic generata -->
